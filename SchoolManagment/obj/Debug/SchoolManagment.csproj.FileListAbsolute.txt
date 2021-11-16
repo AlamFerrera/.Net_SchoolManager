@@ -115,3 +115,7 @@ C:\Users\EIS\Documents\GitHub\.Net_SchoolManager\SchoolManagment\obj\Debug\Schoo
 C:\Users\EIS\Documents\GitHub\.Net_SchoolManager\SchoolManagment\obj\Debug\SchoolManagment.csproj.CopyComplete
 C:\Users\EIS\Documents\GitHub\.Net_SchoolManager\SchoolManagment\obj\Debug\SchoolManagment.dll
 C:\Users\EIS\Documents\GitHub\.Net_SchoolManager\SchoolManagment\obj\Debug\SchoolManagment.pdb
+C:\Users\EIS\Documents\GitHub\.Net_SchoolManager\SchoolManagment\obj\Debug\SchoolManagment.Migrations.AddedBirthDate.resources
+C:\Users\EIS\Documents\GitHub\.Net_SchoolManager\SchoolManagment\obj\Debug\SchoolManagment.csproj.GenerateResource.cache
+C:\Users\EIS\Documents\GitHub\.Net_SchoolManager\SchoolManagment\obj\Debug\SchoolManagment.Migrations.AddedUsers.resources
+C:\Users\EIS\Documents\GitHub\.Net_SchoolManager\SchoolManagment\obj\Debug\SchoolManagment.Migrations.AddedBirthDay.resources
