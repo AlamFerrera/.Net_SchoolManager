@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SchoolManagmentModelStoreContainer" CdmEntityContainer="SchoolManagmentEntities">
-    <EntitySetMapping Name="Courses">
+    <EntitySetMapping Name="Course">
       <EntityTypeMapping TypeName="SchoolManagmentModel.Course">
         <MappingFragment StoreEntitySet="Course">
           <ScalarProperty Name="CourseId" ColumnName="CourseId" />
@@ -10,33 +10,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Enrollments">
+    <EntitySetMapping Name="Enrollment">
       <EntityTypeMapping TypeName="SchoolManagmentModel.Enrollment">
         <MappingFragment StoreEntitySet="Enrollment">
-          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
           <ScalarProperty Name="EnrollmentId" ColumnName="EnrollmentId" />
           <ScalarProperty Name="Grade" ColumnName="Grade" />
           <ScalarProperty Name="CourseID" ColumnName="CourseID" />
           <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Students">
+    <EntitySetMapping Name="Lecturers">
+      <EntityTypeMapping TypeName="SchoolManagmentModel.Lecturers">
+        <MappingFragment StoreEntitySet="Lecturers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
       <EntityTypeMapping TypeName="SchoolManagmentModel.Student">
         <MappingFragment StoreEntitySet="Student">
           <ScalarProperty Name="StudentId" ColumnName="StudentId" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Lecturers">
-      <EntityTypeMapping TypeName="SchoolManagmentModel.Lecturer">
-        <MappingFragment StoreEntitySet="Lecturers">
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

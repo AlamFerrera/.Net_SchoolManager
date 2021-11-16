@@ -21,7 +21,7 @@ namespace SchoolManagment.Models
         public int LecturerID { get; set; }
     
         public virtual Course Course { get; set; }
+        public virtual Lecturers Lecturers { get; set; }
         public virtual Student Student { get; set; }
-        public virtual Lecturer Lecturer { get; set; }
     }
 }
