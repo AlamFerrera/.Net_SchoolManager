@@ -335,6 +335,8 @@
     <Compile Include="Models\Lecturer.cs">
       <DependentUpon>SchoolManagementDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MetaClasses\CoursesMetadata.cs" />
+    <Compile Include="Models\MetaClasses\StudentMetadata.cs" />
     <Compile Include="Models\SchoolManagementDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

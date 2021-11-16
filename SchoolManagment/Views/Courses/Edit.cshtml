@@ -5,13 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>Editar</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Course</h4>
         <hr />
@@ -29,7 +29,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Credits, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Credits, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Credits, new { htmlAttributes = new { @class = "form-control", @min=1 } })
                 @Html.ValidationMessageFor(model => model.Credits, "", new { @class = "text-danger" })
             </div>
         </div>
