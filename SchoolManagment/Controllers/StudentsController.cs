@@ -11,6 +11,7 @@ using SchoolManagment.Models;
 
 namespace SchoolManagment.Controllers
 {
+    [Authorize(Roles = "Teacher")]
     public class StudentsController : Controller
     {
         private SchoolManagmentEntities db = new SchoolManagmentEntities();

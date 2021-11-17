@@ -17,9 +17,11 @@ namespace SchoolManagment.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext context;
 
         public AccountController()
         {
+            context = new ApplicationDbContext();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -139,6 +141,9 @@ namespace SchoolManagment.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.Roles = new SelectList(context.Roles
+                            .Where(q => !q.Name.Contains("Admin"))
+                            .ToList(),"Name","Name");
             return View();
         }
 
@@ -162,7 +167,8 @@ namespace SchoolManagment.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirmar cuenta", "Para confirmar la cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>");
-                    
+
+                    await UserManager.AddToRoleAsync(user.Id,model.UserRole);
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -172,6 +178,9 @@ namespace SchoolManagment.Controllers
                         ModelState.AddModelError("", $"{err}");
                     }
                 }
+                ViewBag.Roles = new SelectList(context.Roles
+                            .Where(q => !q.Name.Contains("Admin"))
+                            .ToList(), "Name", "Name");
                 AddErrors(result);
             }
 
