@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<SchoolManagment.Models.Enrollment>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Listado de Inscripciones";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Inscripciones</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -42,9 +42,9 @@
             @Html.DisplayFor(modelItem => item.Lecturers.FirstName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EnrollmentId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EnrollmentId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EnrollmentId })
+            @Html.ActionLink("Editar", "Edit", new { id=item.EnrollmentId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.EnrollmentId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.EnrollmentId })
         </td>
     </tr>
 }

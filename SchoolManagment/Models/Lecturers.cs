@@ -11,7 +11,8 @@ namespace SchoolManagment.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Lecturers
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,9 +20,13 @@ namespace SchoolManagment.Models
         {
             this.Enrollment = new HashSet<Enrollment>();
         }
-    
+
         public int Id { get; set; }
+
+        [Display(Name = "Profesor Nombre")]
         public string FirstName { get; set; }
+
+        [Display(Name = "Apellidos")]
         public string LastName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

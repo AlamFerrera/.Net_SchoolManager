@@ -9,7 +9,7 @@ namespace SchoolManagment.Models
     public class StudentMetadata
     {
         [StringLength(50)]
-        [Display(Name = "Nombres")]
+        [Display(Name = "Estudiante Nombre")]
         public string FirstName { get; set; }
         [StringLength(50)]
         [Display(Name = "Apellidos")]

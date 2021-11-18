@@ -8,7 +8,7 @@
 <h2>Cursos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -18,7 +18,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Credits)
         </th>
-        <th></th>
+        <th>Acciones</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -30,9 +30,9 @@
             @Html.DisplayFor(modelItem => item.Credits)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CourseId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CourseId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CourseId })
+            @Html.ActionLink("Editar", "Edit", new { id=item.CourseId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.CourseId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.CourseId })
         </td>
     </tr>
 }

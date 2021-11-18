@@ -11,7 +11,8 @@ namespace SchoolManagment.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Course
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +22,11 @@ namespace SchoolManagment.Models
         }
     
         public int CourseId { get; set; }
+
+        [Display(Name = "Titulo")]
         public string Title { get; set; }
+
+        [Display(Name = "Créditos")]
         public int Credits { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
